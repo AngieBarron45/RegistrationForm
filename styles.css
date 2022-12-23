@@ -1,0 +1,65 @@
+body{
+    width: 100%;
+    height: 100vh; /* VH / representa la ALTURA de la ventana gráfica y es relativa al 1% de la altura de la ventana gráfica. */
+    margin: 0; /* 0 / Eliminar la barra de desplazamiento horizontal, configurando el margen predeterminado del cuerpo agregado por algunos navegadores a 0. */
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+label{
+    display: block; /* BLOCK / Los elementos LABEL son elemetos inline y aparecen todos en una sola línea, por lo que colocamos DOSPLAY: BLOCK para hacerlos elementos de Bloque y aparezca en una sola línea por cada elemento. */
+    margin: 0.5rem 0; /* Top y Bottom= 5rem, Left y Right= 0 */
+    /* La unidad rem significa root em y es relativa al tamaño de fuente del elemento html. */
+}
+h1, p{
+    margin: 1em auto; /* Vertical (Top and Bottom) y Horizontal (Left and rigth). */
+    text-align: center;
+}
+form{
+    margin: 0 auto; /* Top and Bottom y Left and rigth. */
+    max-width: 500px; /* El formulario tiene un ANCHO MÁXIMO de 500px. */
+    min-width: 300px;  /* ANCHO MÍNIMO de 300px. */
+    width: 60vw; /* En medio de este rango de máximo y mínimo, que haya un acnho de 60vw. */
+    padding: 2em; /* Le damos 2em de padding a todo el formulario. */
+}
+fieldset{
+    border: none; /* Removemos el borde de los fieldset ya que hace ver todo el contenido muy separado. */
+    padding: 2rem 0; /* Colocamos 2rem de relleno (espacio entre cada fieldset) sólo Bottom and Top, de manera Vertical (Arriba y Abajo) y SIN padding Horizontal (Derecha e Izquierda / Right and Left). */
+    border-bottom: 3px solid #3b3b4f; /* Colocamos un ligero borde SOLAMEMTE a los BORDES INFERIORES DE CADA FIELDSET con un GRUESO de 3px, que sea SÖLIDO y COLOR gris oscuro. Para hacer la separación de los fieldset's. */
+}
+fieldset:last-of-type{ /* PSEUDO CLASE / Le pedimos que tome el último fieldset con la pseudo clase ":last-of-type" y le pedimos que:... */
+    border-bottom: none; /* Remueva el Borde Inferior del ÚLTIMO Fieldset. */
+}
+input, textarea, select{
+    width: 100%; /* Hacemos que todos los elementos seleccionados estén a su 100% de ancho. */
+    margin: 10px 0 0 0; /* Colocamos un margen superior de 10px para cada elemento seleccionado. */
+    /* Colocamos el margen en orden de las MANECILLAS DEL RELOJ= TOP, RIGHT, BOTTOM, and LEFT. */
+    min-height: 2em; /* Para hacer ligeramente más largos los campos. */
+}
+.inline{ /* Colocamos INLINE elements para hacer que los elementos del SEGUNDO FIELDSET queden en la MISMA LÍNEA. */
+    width: unset; /* Con este valor en la propiedad de width, le decimos que remueva el width: 100% que colocamos a los demás fieldset's. */
+    margin: 0 0.5em 0 0; /* Colocamos un margen hacia la derecha de 0.5em para separar input radio y checkbox de labels. */
+    /* Colocamos el margen en orden de las MANECILLAS DEL RELOJ= TOP, RIGHT, BOTTOM, and LEFT. */
+    vertical-align: middle; /* Colocamos alineación vertical a los elementos de type radio y checkbox para acomodarlos al MEDIO de la línea y queden estos elementos alineados con sus respectivos labels. */
+}
+input, textarea{ /* Para mezclar el color de estos elementos con el background-color. */
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff; /* Para que las letras introducidas en cada campo, se vean. */
+}
+input[type="submit"]{ /* ATTRIBUTE SELECTOR / Utilizamos el atributo selector para seleccionar el INPUT con tipo SUBMIT. */
+    display: block; /* Le damos un ámbito de bloque... */
+    width: 60%; /* y un ancho de 60%. */
+    margin: 1rem auto; /* Con esta técnica al igual que el del formilario CENTRAMOS el botón de submit pero dándole 1rem a top y bottom y auto a left y right. */
+    height: 2em; /* Más altura al botón. */
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+}
+input[type="file"]{
+    padding: 1px 2px; /* Mismo ancho que a los demás al selector de archivos FILE. */
+}
+a{
+    color: #dfdfe2; /* Color de Términos y condiciones. */
+}
